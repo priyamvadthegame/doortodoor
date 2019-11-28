@@ -3,4 +3,6 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="PrimaryDarkFadeed">#8b023a5b</color>
+    <color name="Signin_singup_editbox">#023a5b</color>
 </resources>
