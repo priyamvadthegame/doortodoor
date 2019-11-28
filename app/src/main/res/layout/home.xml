@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to DoortoDoorservice"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:fontFamily="sans-serif-black">
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/HomeActivity_name"
+        android:text="Name"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textColor="#1600FC"
+        android:fontFamily="sans-serif">
+    </TextView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Space
+            android:layout_width="40dp"
+            android:layout_height="0dp"></Space>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home_user_email"></ImageView>
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="0dp"></Space>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_user_email"></TextView>
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="0dp"></Space>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_phone_black_24dp"></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_user_phone"></TextView>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About Us"
+        android:fontFamily="sans-serif-black"
+        android:textSize="15sp"
+        android:layout_gravity="center"
+        android:textColor="#1600FC"
+        ></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="doortodoor is a service provider company for local service,we help customers to hire professionals for all their service needs.The reason behinfd this thought is that why can't we buy local service the way we buy products from ecommerce site on the click of a button.We value your time and try our best to provide you quality service."
+        ></TextView>
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="15sp"></Space>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Our Services"
+        ></TextView>
+    <include layout="@layout/gridview"></include>
+
+</LinearLayout>
