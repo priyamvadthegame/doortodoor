@@ -63,7 +63,7 @@ public class OrderDialogClass extends Dialog implements
                 username.setText(nameToBeSetOnDialog);
                 useremail.setText(emailToBeSetOnDialog);
                 messageSubject="Order for Electricty Service By "+nameToBeSetOnDialog;
-                messageBody="Order has been placed for Electricity Service by:\n"+"Name: "+nameToBeSetOnDialog+"\n"+"Address: "+addressToBeSetOnDialog+"\n"+"Email: "+emailToBeSetOnDialog+"\n"+"Message: ";
+                messageBody="Order has been placed for Electricity Service by:\n"+"Name: "+nameToBeSetOnDialog+"\n"+"Address: "+"\n"+"Email: "+emailToBeSetOnDialog+"\n"+"Message: ";
             }
 
             @Override
