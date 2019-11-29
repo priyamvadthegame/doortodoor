@@ -1,7 +1,9 @@
 package com.example.doortodoor;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,17 +40,18 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_activity);
+        toolbar=findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         list.add( R.drawable.electricity);
         list.add( R.drawable.plumbing);
         list.add( R.drawable.cleaning);
         list.add( R.drawable.laundry);
-        toolbar=findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationVIew=findViewById(R.id.navigationView);
         GridView gridview;
-        ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(ProfileActivity.this,drawerLayout,toolbar,R.string.openNavigationDrawer,R.string.closeNavigationDrawer);
+        ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.openNavigationDrawer,R.string.closeNavigationDrawer);
         drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
         firebaseDatabaseref=FirebaseDatabase.getInstance().getReference();
         View headerview=navigationVIew.getHeaderView(0);
         final TextView nameText=headerview.findViewById(R.id.drawer_name_textview);
@@ -78,6 +81,18 @@ public class ProfileActivity extends AppCompatActivity {
         gridviewAdapter adapter=new gridviewAdapter(ProfileActivity.this);
         adapter.set_data(list);
         gridview.setAdapter(adapter);
+        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (list.get(i))
+                {
+                    case R.drawable.electricity:
+                        Intent intent=new Intent(ProfileActivity.this,ElectricityActivity.class);
+                        startActivity(intent);
+                        break;
+                }
+            }
+        });
 
     }
 

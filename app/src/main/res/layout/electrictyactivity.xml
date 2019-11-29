@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="#bbe3eb"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Electricity Service"
+       android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#426519"
+        android:textSize="20dp">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="27dp"
+        android:fontFamily="sans-serif-black"
+        android:text="We are here to provide electrcian for you"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="53dp"
+        android:fontFamily="sans-serif-black"
+        android:text="How it works :"
+        android:textColor="#000000"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="87dp"
+        android:fontFamily="sans-serif-black"
+        android:text="1.Click the order button on the right corner of the screen\n2.Type the problem in the message field then press ok\n3.The problem will be mailed to us and the electrician will contact you within an hour.\n4.Charges will be discuused by electrician as per the problem mentioned byn you.\n5.We will try our best to solve the problem within 24 hrs from the order is placed"
+        android:textAlignment="inherit"
+
+        android:textColor="#808080"></TextView>
+
+    <TextView
+        android:id="@+id/termsandcondition"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="6dp"
+        android:layout_marginBottom="355dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Terms and Conditions:"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/termsandcondition"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="54dp"
+        android:fontFamily="sans-serif-black"
+        android:text="All electrical installation work will be performed in compliance with Federal, State, and Local guidelines and regulations.
+If [doortodoorservice] discovers a need for additional time or materials once the work has commenced, [Sender.Company] will seek written approval prior to continuing work.
+Customer is responsible for providing unmitigated access to the work area. This includes moving any furnishings, wall-hangings, or other items which could prevent [doortodoorservice] from carrying out the listed services.
+All areas of installation will be left in the condition found unless otherwise stated in writing by [Hemant Raj].
+[Application] [User] will provide accessible electricity to all working areas including outdoor areas. This includes proving a live power outlet or generator within 150 feet of the working area.
+Sitework, including demolition or removal of debris, is not included in this electric services contract."
+        android:textAlignment="inherit"
+        android:textColor="#808080"
+        android:textSize="15sp"></TextView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_action_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end|bottom"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="3dp"
+        android:elevation="6dp"
+        app:fabSize="auto"
+        app:srcCompat="@drawable/ic_send_black_24dp">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+</RelativeLayout>
