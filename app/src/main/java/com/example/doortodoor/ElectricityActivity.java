@@ -18,7 +18,7 @@ public class ElectricityActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                OrderDialogClass dialog=new OrderDialogClass(ElectricityActivity.this);
+                OrderDialogClass dialog=new OrderDialogClass(ElectricityActivity.this,"Order Now","Electricity Service");
                 dialog.show();
             }
         });

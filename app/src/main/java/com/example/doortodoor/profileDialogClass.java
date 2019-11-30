@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,42 +21,34 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import jp.wasabeef.blurry.Blurry;
-
-public class OrderDialogClass extends Dialog implements
+public class profileDialogClass extends Dialog implements
         android.view.View.OnClickListener {
 
     public Activity c;
-    public Button ordernow, cancel;
-    public TextView userService,username,useremail;
-    public EditText messageText;
+    public Button ok, cancel;
+    public TextView username,useremail,usermobile,useraddress;
     User user;
-    String nameToBeSetOnDialog,emailToBeSetOnDialog,addressToBeSetOnDialog,messageBody,messageSubject,buttonText,ServiceText;
+    String nameToBeSetOnDialog,emailToBeSetOnDialog,addressToBeSetOnDialog,mobileToBeSetOnDialog;
 
-    public OrderDialogClass(Activity a,String buttonText,String serviceText) {
+    public profileDialogClass(Activity a) {
         super(a);
         this.c = a;
-        this.buttonText=buttonText;
-        this.ServiceText=serviceText;
 
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         DatabaseReference firebaseDatabaseref= FirebaseDatabase.getInstance().getReference();
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.dialog_state);
-        ordernow = findViewById(R.id.btn_yes);
-        ordernow.setText(buttonText);
+        setContentView(R.layout.profile_dialog_state);
+        ok = findViewById(R.id.btn_yes);
         cancel =   findViewById(R.id.btn_no);
-        userService=findViewById(R.id.dialog_userService);
-        userService.setText(ServiceText);
-        username=findViewById(R.id.dialog_username);
-        useremail=findViewById(R.id.dialog_useremail);
-        messageText=findViewById(R.id.messageText);
-        ordernow.setOnClickListener(this);
+        username=findViewById(R.id.profile_dialog_username);
+        useremail=findViewById(R.id.profile_dialog_useremail);
+        usermobile=findViewById(R.id.profile_dialog_mobile);
+        useraddress=findViewById(R.id.profile_dialog_address);
+        ok.setOnClickListener(this);
 
         cancel.setOnClickListener(this);
         firebaseDatabaseref.child("User").child(FirebaseAuth.getInstance().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -67,10 +58,11 @@ public class OrderDialogClass extends Dialog implements
                 nameToBeSetOnDialog=user.name;
                 emailToBeSetOnDialog=user.email;
                 addressToBeSetOnDialog=user.address;
-                username.setText("Name: "+nameToBeSetOnDialog);
-                useremail.setText("Email: "+ emailToBeSetOnDialog);
-                messageSubject=ServiceText+" By:"+nameToBeSetOnDialog;
-                messageBody="Order has been placed for +" +ServiceText+" by:\n"+"Name: "+nameToBeSetOnDialog+"\n"+"Address: "+addressToBeSetOnDialog+"\n"+"Email: "+emailToBeSetOnDialog+"\n"+"Message: ";
+                mobileToBeSetOnDialog=user.mobile;
+                username.setText("Name:"+nameToBeSetOnDialog);
+                useremail.setText("Email:"+emailToBeSetOnDialog);
+                usermobile.setText("Mobile:"+mobileToBeSetOnDialog);
+                useraddress.setText("Address:"+addressToBeSetOnDialog);
             }
 
             @Override
@@ -84,13 +76,10 @@ public class OrderDialogClass extends Dialog implements
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_yes:
-
-                new SendMailTask(c).execute("priyamvadabc@gmail.com",
-                        "7050025156", "hemant.desire91@gmail.com ", messageSubject, messageBody+messageText.getText());
+                dismiss();
 
                 break;
             case R.id.btn_no:
-
                 dismiss();
                 break;
             default:

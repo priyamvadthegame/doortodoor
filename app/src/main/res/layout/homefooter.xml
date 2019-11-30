@@ -46,7 +46,7 @@
                     android:layout_marginTop="5dp"
                     android:fontFamily="serif"
                     android:gravity="center"
-                    android:id="@+id/querytitel"
+                    android:id="@+id/querytitle"
                     android:text="If you have any questions about Profile Evaluation,\nWe look forward to helping you."
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="10sp" />
@@ -185,7 +185,7 @@
                 android:id="@+id/mainfooter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="doortodoorservie assures to provide quality service"
+                android:text="doortodoorservice assures to provide quality service"
                 android:gravity="center"
                 android:textColor="#ffffff"
                 android:textSize="12sp" />

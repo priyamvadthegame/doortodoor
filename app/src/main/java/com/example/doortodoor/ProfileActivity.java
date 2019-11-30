@@ -1,7 +1,9 @@
 package com.example.doortodoor;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -27,7 +29,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProfileActivity extends AppCompatActivity {
+ public class ProfileActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     Toolbar toolbar;
     DrawerLayout drawerLayout;
@@ -36,6 +38,7 @@ public class ProfileActivity extends AppCompatActivity {
     String nameToBeSetOnNavigationBarHeader;
     String emailToBeSetOnNavigationBarHeader;
     List<Integer> list=new ArrayList<Integer>();
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +51,7 @@ public class ProfileActivity extends AppCompatActivity {
         list.add( R.drawable.laundry);
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationVIew=findViewById(R.id.navigationView);
+        navigationVIew.setNavigationItemSelectedListener(this);
         GridView gridview;
         ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.openNavigationDrawer,R.string.closeNavigationDrawer);
         drawerLayout.addDrawerListener(toggle);
@@ -59,6 +63,14 @@ public class ProfileActivity extends AppCompatActivity {
         final TextView homeNameText=findViewById(R.id.HomeActivity_name);
         final TextView homeemailText=findViewById(R.id.home_user_email);
         final TextView homephoneText=findViewById(R.id.home_user_phone);
+        final TextView contactUsQuery=findViewById(R.id.contact_us_query);
+        contactUsQuery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                OrderDialogClass queryDialog=new OrderDialogClass(ProfileActivity.this,"Send","Query");
+                queryDialog.show();
+            }
+        });
         gridview=findViewById(R.id.gridview);
         firebaseDatabaseref.child("User").child(FirebaseAuth.getInstance().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -106,4 +118,23 @@ public class ProfileActivity extends AppCompatActivity {
             super.onBackPressed();
         }
     }
-}
+
+     @Override
+     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+         switch (menuItem.getItemId())
+         {
+             case R.id.profile_menu:
+                 drawerLayout.closeDrawer(GravityCompat.START);
+                 profileDialogClass profiledialog=new profileDialogClass(ProfileActivity.this);
+                 profiledialog.show();
+                 break;
+             case R.id.logout_menu:
+                 FirebaseAuth.getInstance().signOut();
+                 Toast.makeText(ProfileActivity.this,"Logged Out succesfully",Toast.LENGTH_LONG).show();
+                 Intent intent =new Intent(ProfileActivity.this,LoginActivity.class);
+                 startActivity(intent);
+                 break;
+         }
+        return true;
+     }
+ }

@@ -2,8 +2,8 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:layout_marginTop="30dp"
     android:layout_marginBottom="30dp"
     android:layout_marginLeft="20dp"
@@ -12,27 +12,30 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/dialog_userService"
-        android:text="dummy service"
+        android:id="@+id/profile_dialog_userService"
+        android:text="Welcome to door to door service"
         android:textColor="#000000"
         android:fontFamily="sans-serif-black"></TextView>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/dialog_username"
+        android:id="@+id/profile_dialog_username"
         android:text="User:dummy user"></TextView>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/dialog_useremail"
+        android:id="@+id/profile_dialog_useremail"
         android:text="Email:dummy email"></TextView>
-    <EditText
-        android:id="@+id/messageText"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:inputType="text|textMultiLine"
-        android:gravity="top"
-        android:hint="Message"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_dialog_mobile"
+        android:text="Email:dummy mobile"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_dialog_address"
+        android:text="Email:dummy address"></TextView>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,7 +49,7 @@
             android:layout_height="30dp"
             android:background="@android:color/white"
             android:clickable="true"
-            android:text="Order Now"
+            android:text="ok"
             android:textColor="#5DBCD2"
             android:textStyle="bold" />
 
@@ -57,7 +60,7 @@
             android:layout_marginLeft="5dp"
             android:background="@android:color/white"
             android:clickable="true"
-            android:text="Cancel"
+            android:text="cancel"
             android:textColor="#5DBCD2"
             android:textStyle="bold" />
     </LinearLayout>

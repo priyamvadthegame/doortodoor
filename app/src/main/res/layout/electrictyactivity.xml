@@ -62,7 +62,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="6dp"
-        android:layout_marginBottom="355dp"
+        android:layout_marginBottom="371dp"
         android:fontFamily="sans-serif-black"
         android:text="Terms and Conditions:"
         android:textColor="#000000" />
@@ -72,15 +72,15 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/termsandcondition"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="54dp"
+        android:layout_marginBottom="55dp"
         android:fontFamily="sans-serif-black"
         android:text="All electrical installation work will be performed in compliance with Federal, State, and Local guidelines and regulations.
-If [doortodoorservice] discovers a need for additional time or materials once the work has commenced, [Sender.Company] will seek written approval prior to continuing work.
+If [doortodoorservice] discovers a need for additional time or materials once the work has commenced, [doortodoorservice] will seek written approval prior to continuing work.
 Customer is responsible for providing unmitigated access to the work area. This includes moving any furnishings, wall-hangings, or other items which could prevent [doortodoorservice] from carrying out the listed services.
 All areas of installation will be left in the condition found unless otherwise stated in writing by [Hemant Raj].
-[Application] [User] will provide accessible electricity to all working areas including outdoor areas. This includes proving a live power outlet or generator within 150 feet of the working area.
+Application User will provide accessible electricity to all working areas including outdoor areas. This includes proving a live power outlet or generator within 150 feet of the working area.
 Sitework, including demolition or removal of debris, is not included in this electric services contract."
-        android:textAlignment="inherit"
+        android:textAlignment="center"
         android:textColor="#808080"
         android:textSize="15sp"></TextView>
 
