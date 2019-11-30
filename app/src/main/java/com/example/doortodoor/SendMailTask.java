@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -55,6 +56,7 @@ public class SendMailTask extends AsyncTask {
     @Override
     public void onPostExecute(Object result) {
         statusDialog.dismiss();
+        Toast.makeText(sendMailActivity.getApplicationContext(),"Order placed succesfully",Toast.LENGTH_LONG).show();
     }
 
 }

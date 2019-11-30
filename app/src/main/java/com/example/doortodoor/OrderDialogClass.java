@@ -48,7 +48,7 @@ public class OrderDialogClass extends Dialog implements
         userService=findViewById(R.id.dialog_userService);
         userService.setText("Electricity Service");
         username=findViewById(R.id.dialog_username);
-        useremail=findViewById(R.id.dialog_username);
+        useremail=findViewById(R.id.dialog_useremail);
         messageText=findViewById(R.id.messageText);
         ordernow.setOnClickListener(this);
 
@@ -63,7 +63,7 @@ public class OrderDialogClass extends Dialog implements
                 username.setText(nameToBeSetOnDialog);
                 useremail.setText(emailToBeSetOnDialog);
                 messageSubject="Order for Electricty Service By "+nameToBeSetOnDialog;
-                messageBody="Order has been placed for Electricity Service by:\n"+"Name: "+nameToBeSetOnDialog+"\n"+"Address: "+"\n"+"Email: "+emailToBeSetOnDialog+"\n"+"Message: ";
+                messageBody="Order has been placed for Electricity Service by:\n"+"Name: "+nameToBeSetOnDialog+"\n"+"Address: "+addressToBeSetOnDialog+"\n"+"Email: "+emailToBeSetOnDialog+"\n"+"Message: ";
             }
 
             @Override
@@ -79,7 +79,7 @@ public class OrderDialogClass extends Dialog implements
             case R.id.btn_yes:
                 new SendMailTask(c).execute("priyamvadabc@gmail.com",
                         "7050025156", "hemant.desire91@gmail.com ", messageSubject, messageBody+messageText.getText());
-                Toast.makeText(c.getApplicationContext(),"Order placed succesfully",Toast.LENGTH_LONG).show();
+
                 break;
             case R.id.btn_no:
                 dismiss();
