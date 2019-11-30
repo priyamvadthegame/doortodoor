@@ -84,10 +84,14 @@ public class OrderDialogClass extends Dialog implements
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_yes:
-
-                new SendMailTask(c).execute("priyamvadabc@gmail.com",
-                        "7050025156", "hemant.desire91@gmail.com ", messageSubject, messageBody+messageText.getText());
-
+                if(messageText.getText().toString().matches(""))
+                {
+                    Toast.makeText(c.getApplicationContext(),"Please enter a message to continue",Toast.LENGTH_LONG).show();
+                }
+                else {
+                    new SendMailTask(c).execute("priyamvadabc@gmail.com",
+                            "7050025156", "hemant.desire91@gmail.com ", messageSubject, messageBody + messageText.getText());
+                }
                 break;
             case R.id.btn_no:
 
