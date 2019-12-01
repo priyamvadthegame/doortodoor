@@ -60,6 +60,7 @@ public class SignUpActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i=new Intent(SignUpActivity.this,LoginActivity.class);
                 startActivity(i);
+                finish();
             }
         });
     }

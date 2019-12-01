@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:paddingTop="56dp"
     android:paddingLeft="24dp"
+    android:background="#0BA067"
     android:paddingRight="24dp">
-    <ImageView android:src="@drawable/ic_launcher_foreground"
+    <ImageView android:src="@drawable/project"
         android:layout_width="wrap_content"
         android:layout_height="72dp"
         android:layout_marginBottom="24dp"
@@ -14,30 +15,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#000000"
         android:hint="Name" />
     <EditText android:id="@+id/input_address"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:inputType="textPostalAddress"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#000000"
     android:hint="Address" />
     <EditText android:id="@+id/input_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#000000"
         android:inputType="textEmailAddress"
         android:hint="Email" />
     <EditText android:id="@+id/input_mobile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#000000"
         android:inputType="number"
         android:hint="Mobile Number" />
     <EditText android:id="@+id/input_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#000000"
         android:inputType="textPassword"
         android:hint="Password"/>
     <EditText android:id="@+id/input_reEnterPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#000000"
         android:inputType="textPassword"
         android:hint="Re-enter Password"/>
     <Button

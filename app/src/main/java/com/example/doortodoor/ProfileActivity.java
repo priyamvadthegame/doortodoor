@@ -1,6 +1,5 @@
 package com.example.doortodoor;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -102,6 +101,10 @@ import java.util.List;
                         Intent intent=new Intent(ProfileActivity.this,ElectricityActivity.class);
                         startActivity(intent);
                         break;
+                    case R.drawable.laundry:
+                        Intent intent1=new Intent(ProfileActivity.this,LaundryActivity.class);
+                        startActivity(intent1);
+                        break;
                 }
             }
         });
@@ -116,6 +119,7 @@ import java.util.List;
         }
         else {
             super.onBackPressed();
+           FirebaseAuth.getInstance().signOut();
         }
     }
 
@@ -133,6 +137,7 @@ import java.util.List;
                  Toast.makeText(ProfileActivity.this,"Logged Out succesfully",Toast.LENGTH_LONG).show();
                  Intent intent =new Intent(ProfileActivity.this,LoginActivity.class);
                  startActivity(intent);
+                 finish();
                  break;
          }
         return true;
