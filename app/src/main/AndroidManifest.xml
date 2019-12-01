@@ -23,6 +23,8 @@
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".ElectricityActivity"></activity>
         <activity android:name=".LaundryActivity"></activity>
+        <activity android:name=".cleaningActivity"></activity>
+        <activity android:name=".plumbingActivity"></activity>
     </application>
 
 </manifest>

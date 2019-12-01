@@ -105,6 +105,14 @@ import java.util.List;
                         Intent intent1=new Intent(ProfileActivity.this,LaundryActivity.class);
                         startActivity(intent1);
                         break;
+                    case R.drawable.cleaning:
+                        Intent intent2=new Intent(ProfileActivity.this,cleaningActivity.class);
+                        startActivity(intent2);
+                        break;
+                    case R.drawable.plumbing:
+                        Intent intent3=new Intent(ProfileActivity.this,plumbingActivity.class);
+                        startActivity(intent3);
+                        break;
                 }
             }
         });

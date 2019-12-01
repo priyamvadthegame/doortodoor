@@ -89,7 +89,8 @@ public class SignUpActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 progressDialog.cancel();
                                 Toast.makeText(SignUpActivity.this, "registered succesfully", Toast.LENGTH_LONG).show();
-                                Intent i=new Intent(SignUpActivity.this,ProfileActivity.class);
+                                FirebaseAuth.getInstance().signOut();
+                                Intent i=new Intent(SignUpActivity.this,LoginActivity.class);
                                 startActivity(i);
                                 finish();
                             } else {

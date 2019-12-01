@@ -8,24 +8,28 @@
     android:layout_marginBottom="30dp"
     android:layout_marginLeft="20dp"
     android:layout_marginRight="20dp"
+
     >
+    <Space
+        android:layout_width="20dp"
+        android:layout_height="20dp"></Space>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/dialog_userService"
-        android:text="dummy service"
+        android:text="   dummy service"
         android:textColor="#000000"
         android:fontFamily="sans-serif-black"></TextView>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/dialog_username"
-        android:text="User:dummy user"></TextView>
+        android:text="   User:dummy user"></TextView>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/dialog_useremail"
-        android:text="Email:dummy email"></TextView>
+        android:text="   Email:dummy email"></TextView>
     <EditText
         android:id="@+id/messageText"
         android:layout_width="match_parent"

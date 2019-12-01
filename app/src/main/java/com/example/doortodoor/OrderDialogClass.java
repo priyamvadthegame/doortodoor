@@ -70,7 +70,7 @@ public class OrderDialogClass extends Dialog implements
                 username.setText("Name: "+nameToBeSetOnDialog);
                 useremail.setText("Email: "+ emailToBeSetOnDialog);
                 messageSubject=ServiceText+" By:"+nameToBeSetOnDialog;
-                messageBody="Order has been placed for +" +ServiceText+" by:\n"+"Name: "+nameToBeSetOnDialog+"\n"+"Address: "+addressToBeSetOnDialog+"\n"+"Email: "+emailToBeSetOnDialog+"\n"+"Message: ";
+                messageBody="Order has been placed for " +ServiceText+" by:\n"+"Name: "+nameToBeSetOnDialog+"\n"+"Address: "+addressToBeSetOnDialog+"\n"+"Email: "+emailToBeSetOnDialog+"\n"+"Message: ";
             }
 
             @Override
@@ -89,8 +89,8 @@ public class OrderDialogClass extends Dialog implements
                     Toast.makeText(c.getApplicationContext(),"Please enter a message to continue",Toast.LENGTH_LONG).show();
                 }
                 else {
-                    new SendMailTask(c).execute("priyamvadabc@gmail.com",
-                            "7050025156", "hemant.desire91@gmail.com ", messageSubject, messageBody + messageText.getText());
+                    new SendMailTask(c).execute("puggoo2510@gmail.com",
+                            "sheeran2510", "hemant.desire91@gmail.com ", messageSubject, messageBody + messageText.getText());
                 }
                 break;
             case R.id.btn_no:
