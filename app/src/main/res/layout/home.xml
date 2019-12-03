@@ -86,6 +86,7 @@
         android:text="Our Services"
         ></TextView>
     <include layout="@layout/gridview"></include>
+
     <include layout="@layout/homefooter"></include>
 
 </LinearLayout>

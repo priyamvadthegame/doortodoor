@@ -6,6 +6,7 @@
     android:paddingLeft="24dp"
     android:background="#0BA067"
     android:paddingRight="24dp">
+
     <ImageView android:src="@drawable/project"
         android:layout_width="wrap_content"
         android:layout_height="72dp"

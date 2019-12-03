@@ -57,23 +57,29 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
         android:layout_marginTop="12dp"
+        android:layout_marginBottom="3dp"
         android:fontFamily="sans-serif-black"
         android:text="1.Click the order button on the right corner of the screen\n2.Type the problem in the message field then press ok\n3.The problem will be mailed to us and the insta cleaning service will contact you within an hour.\n4.Charges will be charged as per the price mentioned below.\n5.We will try our best to complete the desired srvice within 48 hrs from the order is placed."
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="400dp"
         android:layout_height="275dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="2dp"
+        android:src="@drawable/cleaningphoto"
         app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        android:src="@drawable/cleaningphoto" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/textView5"
