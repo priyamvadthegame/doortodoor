@@ -22,7 +22,7 @@
         android:layout_width="104dp"
         android:layout_height="93dp"
         tools:srcCompat="@tools:sample/avatars"
-        android:src="@drawable/ic_profile"/>
+        android:src="@drawable/project"/>
 
     <TextView
         android:id="@+id/drawer_name_textview"

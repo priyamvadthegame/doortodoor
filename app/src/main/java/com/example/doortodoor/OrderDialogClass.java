@@ -89,8 +89,8 @@ public class OrderDialogClass extends Dialog implements
                     Toast.makeText(c.getApplicationContext(),"Please enter a message to continue",Toast.LENGTH_LONG).show();
                 }
                 else {
-                    new SendMailTask(c).execute("puggoo2510@gmail.com",
-                            "sheeran2510", "hemant.desire91@gmail.com ", messageSubject, messageBody + messageText.getText());
+                    new SendMailTask(c).execute("aabhishek100001@gmail.com",
+                            "7050025156", "abhishekanand143009@gmail.com ", messageSubject, messageBody + messageText.getText());
                 }
                 break;
             case R.id.btn_no:

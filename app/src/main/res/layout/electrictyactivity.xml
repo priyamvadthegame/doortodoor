@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Electricity Service"
-       android:layout_alignParentTop="true"
+        android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
         android:fontFamily="sans-serif-black"
         android:textColor="#426519"
@@ -75,9 +75,9 @@
         android:layout_marginBottom="55dp"
         android:fontFamily="sans-serif-black"
         android:text="All electrical installation work will be performed in compliance with Federal, State, and Local guidelines and regulations.
-If [doortodoorservice] discovers a need for additional time or materials once the work has commenced, [doortodoorservice] will seek written approval prior to continuing work.
-Customer is responsible for providing unmitigated access to the work area. This includes moving any furnishings, wall-hangings, or other items which could prevent [doortodoorservice] from carrying out the listed services.
-All areas of installation will be left in the condition found unless otherwise stated in writing by [Hemant Raj].
+If [HELPRR] discovers a need for additional time or materials once the work has commenced, [HELPRR] will seek written approval prior to continuing work.
+Customer is responsible for providing unmitigated access to the work area. This includes moving any furnishings, wall-hangings, or other items which could prevent [HELPRR] from carrying out the listed services.
+All areas of installation will be left in the condition found unless otherwise stated in writing by [Abhishek Anand].
 Application User will provide accessible electricity to all working areas including outdoor areas. This includes proving a live power outlet or generator within 150 feet of the working area.
 Sitework, including demolition or removal of debris, is not included in this electric services contract."
         android:textAlignment="center"

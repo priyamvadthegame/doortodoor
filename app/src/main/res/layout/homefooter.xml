@@ -188,7 +188,7 @@
                 android:id="@+id/mainfooter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="doortodoorservice assures to provide quality service"
+                android:text="HELPRR assures to provide quality service"
                 android:gravity="center"
                 android:textColor="#ffffff"
                 android:textSize="12sp" />
